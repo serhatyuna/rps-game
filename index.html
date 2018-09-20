@@ -16,19 +16,36 @@
     <h1>RPS Game</h1>
 
     <div class="letsplay" v-if="!play">
-      <button id="letsplay-button" v-on:click="play = true">Let's Play!</button>
+      <button id="letsplay-button" v-on:click="play = true">Start Game!</button>
     </div>
 
+    <h3 v-if="play">Your Move</h3>
     <div class="moves" v-if="play">
-      <div class="rockImage">
+      <div class="rockImage" v-if="isRockSelected === null || isRockSelected" v-on:click="makeUsersMove('rock')">
         <img src="static/images/fist.png" alt="Rock">
         <span>Rock</span>
       </div>
-      <div class="hand">
+      <div class="paperImage" v-if="isPaperSelected === null || isPaperSelected" v-on:click="makeUsersMove('paper')">
         <img src="static/images/hand.png" alt="Fist">
         <span>Paper</span>
       </div>
-      <div class="scissors">
+      <div class="scissorsImage" v-if="isScissorsSelected === null || isScissorsSelected" v-on:click="makeUsersMove('scissors')">
+        <img src="static/images/scissors.png" alt="Scissors">
+        <span>Scissors</span>
+      </div>
+    </div>
+
+    <h3 v-if="isGameOver" class="opponent-title">Opponent's Move</h3>
+    <div class="opponentsMove" v-if="isGameOver">
+      <div class="rockImage" v-if="moveWillBeShown === 'rock'">
+        <img src="static/images/fist.png" alt="Rock">
+        <span>Rock</span>
+      </div>
+      <div class="paperImage" v-if="moveWillBeShown === 'paper'">
+        <img src="static/images/hand.png" alt="Fist">
+        <span>Paper</span>
+      </div>
+      <div class="scissorsImage" v-if="moveWillBeShown === 'scissors'">
         <img src="static/images/scissors.png" alt="Scissors">
         <span>Scissors</span>
       </div>

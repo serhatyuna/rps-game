@@ -24,6 +24,14 @@ img {
   margin-bottom: 40px;
 }
 
+.container h3 {
+  color: #1a237e;
+}
+
+.opponent-title {
+  margin-top: 40px;
+}
+
 #letsplay-button {
   border-radius: 8px;
   background: #00AE68;
@@ -34,20 +42,20 @@ img {
   cursor: pointer;
 }
 
-.moves {
+.moves, .opponentsMove {
   width: 420px;
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
 }
 
-.moves img {
+.moves img, .opponentsMove img {
   width: 100px;
   height: 90px;
   cursor: pointer;
 }
 
-.moves > div {
+.moves > div, .opponentsMove > div {
   padding: 20px;
   height: 120px;
   display: flex;
@@ -60,9 +68,10 @@ img {
   cursor: pointer;
 }
 
-.moves > div:hover {
+.moves > div:hover, .opponentsMove > div:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
 }
 
-.moves > div span {
+.opponentsMove {
+  margin-top: 10px;
 }
