@@ -50,6 +50,12 @@
         <span>Scissors</span>
       </div>
     </div>
+
+    <div class="winner" v-if="winner !== ''">
+      <h2>{{ winner }}</h2>
+
+      <button id="playAgain" v-on:click="playAgain()">Play Again!</button>
+    </div>
   </div>
 
 

@@ -19,20 +19,25 @@ img {
   align-items: center;
 }
 
-.container h1 {
+.container h1, .container h2, .container h3 {
   color: #1a237e;
-  margin-bottom: 40px;
 }
 
-.container h3 {
-  color: #1a237e;
+.container h1 {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.container h2 {
+  font-size: 1.8em;
+  margin-bottom: 5px;
 }
 
 .opponent-title {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-#letsplay-button {
+#letsplay-button, #playAgain {
   border-radius: 8px;
   background: #00AE68;
   border: 0;
@@ -47,6 +52,7 @@ img {
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
+  transition: justify-content 1s;
 }
 
 .moves img, .opponentsMove img {
@@ -74,4 +80,11 @@ img {
 
 .opponentsMove {
   margin-top: 10px;
+}
+
+.winner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
