@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rock - Paper - Scissors Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles/main.css">
+</head>
+
+<body>
+
+  <div class="container" id="app">
+    <h1>RPS Game</h1>
+
+    <div class="letsplay" v-if="!play">
+      <button id="letsplay-button" v-on:click="play = true">Let's Play!</button>
+    </div>
+
+    <div class="moves" v-if="play">
+      <div class="rockImage">
+        <img src="static/images/fist.png" alt="Rock">
+        <span>Rock</span>
+      </div>
+      <div class="hand">
+        <img src="static/images/hand.png" alt="Fist">
+        <span>Paper</span>
+      </div>
+      <div class="scissors">
+        <img src="static/images/scissors.png" alt="Scissors">
+        <span>Scissors</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Scissors by Cristiano Zoucas from the Noun Project -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="app/index.js"></script>
+</body>
+
+</html>
